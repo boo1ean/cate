@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+var argv = require('minimist')(process.argv.slice(2));
+var prettify = require('../src/prettify');
+
+if (!argv._.length) {
+	return console.log('Usage: cate sample.xml');
+}
+
+prettify(argv._[0], console.log);
