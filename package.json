@@ -30,6 +30,7 @@
   "homepage": "https://github.com/boo1ean/cate",
   "dependencies": {
     "minimist": "~0.2.0",
-    "pretty-data": "~0.40.0"
+    "pretty-data": "~0.40.0",
+    "request": "^2.36.0"
   }
 }
