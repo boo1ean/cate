@@ -1,6 +1,7 @@
 var pd = require('pretty-data').pd;
 var fs = require('fs');
 var request = require('request');
+var jsb = require('js-beautify');
 
 var formats = ['xml', 'json', 'sql', 'css'];
 
@@ -35,11 +36,14 @@ var nop = function(a) {
 };
 
 var getFormatter = function(format) {
-	if (formats.indexOf(format) === -1) {
+	if (formats.indexOf(format) !== -1) {
+		return pd[format].bind(pd);	
+	} else if (format === 'js'){
+		return jsb;
+	} else {
 		return nop;
 	}
 
-	return pd[format].bind(pd);
 };
 
 // TODO many input files
