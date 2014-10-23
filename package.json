@@ -1,6 +1,6 @@
 {
   "name": "cate",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Pretty printer for different file formats",
   "main": "index.js",
   "scripts": {
